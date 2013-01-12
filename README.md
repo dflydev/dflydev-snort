@@ -54,7 +54,7 @@ Not Invented Here
 -----------------
 
 This work was heavily influenced by [Apache Tika][4] and the information
-available from the [Content-Type Processing Model draft][5].
+available from the [Content-Type Processing Model draft][1].
 
 
 [1]: http://tools.ietf.org/html/draft-abarth-mime-sniff-01
