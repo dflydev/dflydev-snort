@@ -18,6 +18,10 @@
     "require": {
         "php": ">=5.3.3"
     },
+    "replace": {
+        "dflydev/snort-buffer": "self.version",
+        "dflydev/snort-textorbinary": "self.version"
+    },
     "autoload": {
         "psr-0": {
             "Dflydev\\Snort": "src"

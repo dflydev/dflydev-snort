@@ -1,6 +1,6 @@
 <?php
 
-namespace Dflydev\Snort;
+namespace Dflydev\Snort\Buffer;
 
 class Buffer
 {
@@ -39,8 +39,7 @@ class Buffer
 
     public function countRange($from, $to)
     {
-        if ($from < 0 || $to > 255 || $from > $to) {
-            print " [ $from x $to ]\n";
+        if ($from < 0 || $from > $to) {
             throw new \InvalidArgumentException('Invalid range');
         }
 

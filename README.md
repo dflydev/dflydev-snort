@@ -29,24 +29,24 @@ require __DIR__.'/vendor/autoload.php';
 $resource = fopen('/path/to/a/file', 'r');
 $bytes = fread($resource, 512);
 
-$buffer = new Dflydev\Snort\Buffer;
+$buffer = new Dflydev\Snort\Buffer\Buffer;
 $buffer->addData($bytes, 0, strlen($bytes));
 
-$sniffer = new Dflydev\Snort\TextOrBinary\TextOrBinarySniffer($buffer);
+$sniffer = new Dflydev\Snort\TextOrBinary\TextOrBinarySniffer;
 
-if ($sniffer->isLikelyText()) {
+if ($sniffer->isLikelyText($buffer)) {
 	print "Well, probably text? (as best as we can guess in 512 bytes...)\n";
 }
 
-if ($sniffer->isLikelyBinary()) {
+if ($sniffer->isLikelyBinary($buffer)) {
 	print "Well, probably binary? (as best as we can guess in 512 bytes...)\n";
 }
 
-if ($sniffer->isMostlyAscii()) {
+if ($sniffer->isMostlyAscii($buffer)) {
     print "Yup, Mostly ASCII!\n";
 }
 
-if ($sniffer->looksLikeUtf8()) {
+if ($sniffer->looksLikeUtf8($buffer)) {
     print "Yup, UTF-8!\n";
 }
 ```
