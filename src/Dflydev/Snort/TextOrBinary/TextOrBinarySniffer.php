@@ -6,9 +6,21 @@ use Dflydev\Snort\Buffer;
 
 class TextOrBinarySniffer
 {
+    private $buffer;
+
     public function __construct(Buffer $buffer)
     {
         $this->buffer = $buffer;
+    }
+
+    public function isLikelyText()
+    {
+        return $this->isMostlyAscii() || $this->looksLikeUtf8();
+    }
+
+    public function isLikelyBinary()
+    {
+        return !$this->isLikelyText();
     }
 
     public function isMostlyAscii()

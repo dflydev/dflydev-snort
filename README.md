@@ -34,6 +34,14 @@ $buffer->addData($bytes, 0, strlen($bytes));
 
 $sniffer = new Dflydev\Snort\TextOrBinary\TextOrBinarySniffer($buffer);
 
+if ($sniffer->isLikelyText()) {
+	print "Well, probably text? (as best as we can guess in 512 bytes...)\n";
+}
+
+if ($sniffer->isLikelyBinary()) {
+	print "Well, probably binary? (as best as we can guess in 512 bytes...)\n";
+}
+
 if ($sniffer->isMostlyAscii()) {
     print "Yup, Mostly ASCII!\n";
 }
