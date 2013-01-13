@@ -11,7 +11,7 @@ class Buffer
     public function addData($buffer, $offset, $length)
     {
         for ($i = 0; $i < $length; $i++) {
-            $byte = $buffer[$i];
+            $byte = $buffer[$i + $offset];
             $asciiValue = ord($byte);
             if (!isset($this->counts[$asciiValue])) {
                 $this->counts[$asciiValue] = 0;
@@ -37,14 +37,22 @@ class Buffer
         return 0;
     }
 
-    public function countRange($from, $to)
+    public function countRange($fromInclusive, $toExclusive)
     {
-        if ($from < 0 || $from > $to) {
-            throw new \InvalidArgumentException('Invalid range');
+        if ($fromInclusive < 0) {
+            throw new \InvalidArgumentException('Invalid range; cannot count from a negative "from" value.');
+        }
+
+        if ($fromInclusive > $toExclusive) {
+            throw new \InvalidArgumentException('Invalid range; cannot count from a "from" value that is larger than the "to" value.');
+        }
+
+        if ($fromInclusive === $toExclusive) {
+            throw new \InvalidArgumentException('Invalid range; cannot count from a "from" value to the same "to" value since "to" value is exclusive.');
         }
 
         $count = 0;
-        for ($i = $from; $i < $to; $i++) {
+        for ($i = $fromInclusive; $i < $toExclusive; $i++) {
             $count += $this->count($i);
         }
 
