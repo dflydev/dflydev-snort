@@ -48,7 +48,7 @@ MIT, see LICENSE.
 Not Invented Here
 -----------------
 
-This work was heavily influenced by [Apache Tika][4].
+This work was heavily influenced by [Apache Tika][3].
 
 
 [1]: http://getcomposer.org
