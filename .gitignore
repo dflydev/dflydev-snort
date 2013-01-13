@@ -1,3 +1,3 @@
-/src/Dflydev/Snort/Buffer/vendor/
+/src/Dflydev/Snort/*/vendor/
 /vendor/
 composer.lock

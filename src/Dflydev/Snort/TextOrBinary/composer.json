@@ -1,0 +1,32 @@
+{
+    "name": "dflydev/snort-textorbinary",
+    "description": "Buffer analysis to determine whether a Buffer is more likely to represent text or binary data.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dragonfly Development Inc.",
+            "email": "info@dflydev.com",
+            "homepage": "http://dflydev.com"
+        },
+        {
+            "name": "Beau Simensen",
+            "email": "beau@dflydev.com",
+            "homepage": "http://beausimensen.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "dflydev/snort-buffer": "self.version"
+    },
+    "autoload": {
+        "psr-0": {
+            "Dflydev\\Snort\\TextOrBinary": ""
+        }
+    },
+    "target-dir": "Dflydev/Snort/TextOrBinary",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
