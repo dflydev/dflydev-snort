@@ -3,7 +3,8 @@ Snort
 
 Sniff content to determine things about it.
 
-Partially implemented based off of [Content-Type Processing Model draft][1].
+Partial implementation of [Content-Type Processing Model draft][1] as inspired
+by [Apache Tika][4].
 
 
 Requirements
@@ -58,6 +59,13 @@ License
 MIT, see LICENSE.
 
 
+Community
+---------
+
+If you have questions or want to help out, join us in the **#dflydev** channel
+on irc.freenode.net or mention [@dflydev][5] on Twitter.
+
+
 Not Invented Here
 -----------------
 
@@ -69,3 +77,4 @@ available from the [Content-Type Processing Model draft][1].
 [2]: http://getcomposer.org
 [3]: https://packagist.org/packages/dflydev/snort
 [4]: http://tika.apache.org
+[5]: https://twitter.com/dflydev

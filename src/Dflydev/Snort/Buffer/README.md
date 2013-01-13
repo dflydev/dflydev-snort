@@ -45,6 +45,13 @@ License
 MIT, see LICENSE.
 
 
+Community
+---------
+
+If you have questions or want to help out, join us in the **#dflydev** channel
+on irc.freenode.net or mention [@dflydev][4] on Twitter.
+
+
 Not Invented Here
 -----------------
 
@@ -54,3 +61,4 @@ This work was heavily influenced by [Apache Tika][3].
 [1]: http://getcomposer.org
 [2]: https://packagist.org/packages/dflydev/snort
 [3]: http://tika.apache.org
+[4]: https://twitter.com/dflydev
