@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit colors="true" bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="Snort Test Suite">
+        <testsuite name="Snort Buffer Test Suite">
             <directory>./tests/Dflydev/Snort</directory>
             <directory>./src/Dflydev/Snort/Buffer/Tests</directory>
             <directory>./src/Dflydev/Snort/TextOrBinary/Tests</directory>
@@ -13,9 +13,9 @@
             <directory>./src/Dflydev/Snort/</directory>
             <exclude>
                 <directory>./src/Dflydev/Snort/Buffer/Tests/</directory>
-                <directory>./src/Dflydev/Snort/Buffer/vendor</directory>
+                <directory>./src/Dflydev/Snort/Buffer/vendor/</directory>
                 <directory>./src/Dflydev/Snort/TextOrBinary/Tests/</directory>
-                <directory>./src/Dflydev/Snort/TextOrBinary/vendor</directory>
+                <directory>./src/Dflydev/Snort/TextOrBinary/vendor/</directory>
             </exclude>
         </whitelist>
     </filter>
