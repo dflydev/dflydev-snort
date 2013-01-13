@@ -49,7 +49,7 @@ Community
 ---------
 
 If you have questions or want to help out, join us in the **#dflydev** channel
-on irc.freenode.net or mention [@dflydev][4] on Twitter.
+on **irc.freenode.net** or mention [@dflydev][4] on Twitter.
 
 
 Not Invented Here
